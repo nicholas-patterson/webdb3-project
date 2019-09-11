@@ -10,7 +10,11 @@ SELECT Orders.OrderID, Orders.OrderDate, Shippers.ShipperName FROM [Orders] JOIN
 
 ### Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
 
+SELECT Products.ProductName, OrderDetails.Quantity FROM [OrderDetails] JOIN Products ON Products.ProductID = OrderDetails.ProductID WHERE OrderID = 10251
+
 ### Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
+
+SELECT Orders.OrderID, Customers.CustomerName, Employees.LastName FROM [Orders] JOIN Customers ON Orders.CustomerID = Customers.CustomerID JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
 
 ### (Stretch) Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 9 records.
 
