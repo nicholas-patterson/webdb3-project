@@ -10,7 +10,9 @@ module.exports = {
 };
 
 function find() {
-  return db("schemes");
+  return db("schemes").then(schemes => {
+    return schemes;
+  });
 }
 
 function findById(id) {
